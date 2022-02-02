@@ -22,6 +22,7 @@ contract SharedWallet is Ownable {
     }
 
     function withdrawMoney(address payable _to, uint _amount) public isAllowed(_amount) {
+        require(_amount <= address(this).balance, "Contract does'nt own enough money");
         _to.transfer(_amount);
     }
 
