@@ -2,7 +2,7 @@
 
 pragma solidity 0.8.1;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Allowance is Ownable {
     mapping(address => uint) public allowance;
